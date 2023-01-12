@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 29/10/2019 03:43:39 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="entidades.Periodo" table="periodo" schema="public" optimistic-lock="version">
+        <id name="idperiodo" type="int">
+            <column name="idperiodo" />
+            <generator class="increment" />
+        </id>
+        <property name="fechainicial" type="date">
+            <column name="fechainicial" length="13" />
+        </property>
+        <property name="fechafinal" type="date">
+            <column name="fechafinal" length="13" />
+        </property>
+        <property name="enproceso" type="java.lang.Boolean">
+            <column name="enproceso" />
+        </property>
+        <property name="terminado" type="java.lang.Boolean">
+            <column name="terminado" />
+        </property>
+        <set name="inventarios" table="inventario" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idperiodo" />
+            </key>
+            <one-to-many class="entidades.Inventario" />
+        </set>
+        <set name="partidas" table="partida" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idperiodo" />
+            </key>
+            <one-to-many class="entidades.Partida" />
+        </set>
+    </class>
+</hibernate-mapping>

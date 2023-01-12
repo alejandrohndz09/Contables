@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 29/10/2019 03:43:39 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="entidades.Cuenta" table="cuenta" schema="public" optimistic-lock="version">
+        <id name="idcuenta" type="int">
+            <column name="idcuenta" />
+            <generator class="increment" />
+        </id>
+        <many-to-one name="cuenta" class="entidades.Cuenta" fetch="select">
+            <column name="cuentapadre" />
+        </many-to-one>
+        <property name="nombrecuenta" type="string">
+            <column name="nombrecuenta" length="200" />
+        </property>
+        <property name="descripcioncuenta" type="string">
+            <column name="descripcioncuenta" length="400" />
+        </property>
+        <property name="tipocuenta" type="string">
+            <column name="tipocuenta" length="10" />
+        </property>
+        <property name="codigocuenta" type="string">
+            <column name="codigocuenta" length="50" />
+        </property>
+        <set name="cuentas" table="cuenta" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="cuentapadre" />
+            </key>
+            <one-to-many class="entidades.Cuenta" />
+        </set>
+        <set name="debehabers" table="debehaber" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idcuenta" />
+            </key>
+            <one-to-many class="entidades.Debehaber" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,140 @@
+<%
+    String c = request.getParameter("num-partida");
+    long i;
+    if (c != null) {
+        try {
+            i = Long.parseLong(c);
+            if (i < 0) {
+                i = 1;
+            } else {
+                i++;
+            }
+        } catch (Exception e) {
+            return;
+        }
+    } else {
+        i = 0;
+        return;
+    }
+%>
+<%
+    String opcion = request.getParameter("ajax-opcion");
+    if (opcion == null) {
+        return;
+    }
+    if (opcion.equals("partida")) {
+%>
+
+<div class="sticky-scroll-box bg-white" data-num-partida="<%=i%>" data-type="partida">
+    <div class="row text-center bg-light py-2">
+        <div class="col-md-12">
+            <h4 class="font-weight-bold" style="color: red">Partida # <%=i%></h4>
+        </div>
+        <div class="col-md-3 font-weight-bold">
+            Fecha
+        </div>
+        <div class="col-md-3 font-weight-bold">
+            Concepto
+        </div>
+        <div class="col-md-3 font-weight-bold">
+            Debe
+        </div>
+        <div class="col-md-3 font-weight-bold">
+            Haber
+        </div>
+    </div>
+    <div class="row px-5">
+        <div class="col-md-3 text-center font-weight-bold">
+            <div class="row">
+                <div class="col-md-12">
+                    <br>
+                    <input type="date" class="form-control" name="fecharegistro" id="fecharegistro">
+                </div>
+            </div>
+        </div>
+        <!--cargos y abonos con las cuentas-->
+        <div class="col-md-9 text-center font-weight-bold" data-type="lista-ca">
+            <div class="row" data-type="ca">
+                <div class="col-md-4">
+                    <br>
+                    <input type="checkbox" data-type="quitar">
+                    <a href="#" data-codigo="" class="text-muted font-weight-bold">Agregar cuenta</a>
+                </div>
+                <div class="col-md-4">
+                    <br>
+                    <input type="number" class="form-control" name="cargo" id="cargo" placeholder="00.00">
+                </div>
+                <div class="col-md-4">
+                    <br>
+                    <input type="number" class="form-control" name="abono" id="abono" placeholder="00.00">
+                </div>
+            </div>
+            <div class="row" data-type="ca">
+                <div class="col-md-4">
+                    <br>
+                    <input type="checkbox" data-type="quitar">
+                    <a href="#" data-codigo="" class="text-muted font-weight-bold">Agregar cuenta</a>
+                </div>
+                <div class="col-md-4">
+                    <br>
+                    <input type="number" class="form-control" name="cargo" id="cargo" placeholder="00.00">
+                </div>
+                <div class="col-md-4">
+                    <br>
+                    <input type="number" class="form-control" name="abono" id="abono" placeholder="00.00">
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row mb-1 px-5 bg-light">
+        <div class="col-md-3 text-center font-weight-bold">
+
+        </div>
+        <div class="col-md-3 text-center font-weight-bold">
+            <label class="form-group">Total cargos/abonos</label>
+        </div>
+        <div class="col-md-3 text-center font-weight-bold">
+            $ 00.00
+        </div>
+        <div class="col-md-3 text-center font-weight-bold">
+            $ 00.00
+        </div>
+    </div>
+    <br>
+    <div class="row text-center px-2">
+        <div class="col-md-2">
+            <a data-type="btn-agregar" href="#" class="btn btn-outline-success"><span class="fa fa-plus"></span> Cuentas</a>
+        </div>
+        <div class="col-md-2">
+            <a data-type="btn-quitarcuenta" href="#" class="btn btn-outline-danger"><span class="fa fa-remove"></span> Quitar</a>
+        </div>
+        <div class="col-md-8">
+            <div class="row font-weight-bold text-center">
+                <div class="col-md-3">
+                    <label class="form-group">Descripción de la Transacción</label>
+                </div>
+                <div class="col-9">
+                    <textarea class="form-control" type="text"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<%} else if (opcion.equals("cargo-abono")) {%>
+<div class="row" data-type="ca">
+    <div class="col-md-4">
+        <br>
+        <input type="checkbox" data-type="quitar">
+        <a href="#" data-codigo="" class="text-muted font-weight-bold">Agregar cuenta</a>
+    </div>
+    <div class="col-md-4">
+        <br>
+        <input type="number" class="form-control" name="cargo" id="cargo" placeholder="00.00">
+    </div>
+    <div class="col-md-4">
+        <br>
+        <input type="number" class="form-control" name="abono" id="abono" placeholder="00.00">
+    </div>
+</div>
+<%}%>

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 29/10/2019 03:43:39 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="entidades.Inventario" table="inventario" schema="public" optimistic-lock="version">
+        <id name="idinventario" type="int">
+            <column name="idinventario" />
+            <generator class="increment" />
+        </id>
+        <many-to-one name="periodo" class="entidades.Periodo" fetch="select">
+            <column name="idperiodo" />
+        </many-to-one>
+        <property name="descripcion" type="string">
+            <column name="descripcion" length="50" />
+        </property>
+        <property name="valor" type="string">
+            <column name="valor" length="100" />
+        </property>
+    </class>
+</hibernate-mapping>

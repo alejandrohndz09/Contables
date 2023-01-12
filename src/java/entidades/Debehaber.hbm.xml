@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 29/10/2019 03:43:39 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="entidades.Debehaber" table="debehaber" schema="public" optimistic-lock="version">
+        <id name="iddebehaber" type="int">
+            <column name="iddebehaber" />
+            <generator class="increment" />
+        </id>
+        <many-to-one name="cuenta" class="entidades.Cuenta" lazy="false" fetch="select">
+            <column name="idcuenta" />
+        </many-to-one>
+        <many-to-one name="partida" class="entidades.Partida" lazy="false" fetch="select">
+            <column name="idpartida" />
+        </many-to-one>
+        <property name="montopartida" type="big_decimal">
+            <column name="montopartida" precision="20" />
+        </property>
+        <property name="tipotransaccion" type="java.lang.Character">
+            <column name="tipotransaccion" length="1" />
+        </property>
+    </class>
+</hibernate-mapping>

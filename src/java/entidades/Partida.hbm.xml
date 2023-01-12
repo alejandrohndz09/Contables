@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 29/10/2019 03:43:39 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="entidades.Partida" table="partida" schema="public" optimistic-lock="version">
+        <id name="idpartida" type="int">
+            <column name="idpartida" />
+            <generator class="increment" />
+        </id>
+        <many-to-one name="periodo" class="entidades.Periodo" lazy="false" fetch="select">
+            <column name="idperiodo" />
+        </many-to-one>
+        <property name="fecha" type="date">
+            <column name="fecha" length="13" />
+        </property>
+        <property name="descripcion" type="string">
+            <column name="descripcion" length="300" />
+        </property>
+        <property name="numpartida" type="java.lang.Integer">
+            <column name="numpartida" />
+        </property>
+        <set name="debehabers" table="debehaber" inverse="true" lazy="false" fetch="select">
+            <key>
+                <column name="idpartida" />
+            </key>
+            <one-to-many class="entidades.Debehaber" />
+        </set>
+    </class>
+</hibernate-mapping>
