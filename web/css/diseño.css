@@ -1,10 +1,10 @@
 
 body{
-    background-image: url('../img/fondo.png');
+    
 }
 
 .jumbotron{
-    background-color: #17a2b8 !important;
+    background-color: #f5a623 !important;
     color: white;
     font-weight: bolder;
     text-align: center;
@@ -12,7 +12,7 @@ body{
 
 .acercade{
     background-color: white !important;
-    color: #17a2b8 !important;
+    color: #f5a623 !important;
     font-weight: bolder;
     text-align: justify;
 }
@@ -30,7 +30,7 @@ body{
 }
 
 .navbar-brand:link, .navbar-brand:visited{
-    color: #17a2b8 !important;
+    color: #f5a623 !important;
 }
 
 #navbar li a:link, #navbar li a:visited{
@@ -38,7 +38,7 @@ body{
 }
 
 #navbar li a:hover, #navbar li a.active{
-    color: #17a2b8 !important;
+    color: #f5a623 !important;
 }
 
 .bg-dark{
@@ -86,7 +86,7 @@ body{
 }
 /*estilo para el <ul> padre seleccionado*/
 .focus {
-    background-color: #17a2b8 ;
+    background-color: #f5a623;
     color: #e9ecef !important;
 }
 .file-tree a {
@@ -100,7 +100,7 @@ body{
 }
 .file-tree a:hover {
     background-color: #e9ecef;
-    color:#17a2b8 !important;
+    color:#f5a623 !important;
     transition: all .2s;
 }
 
@@ -110,7 +110,7 @@ body{
     line-height:1.8em;
     margin-left:20px;
     padding-left:18px;
-    border-left:1px dotted #aaa;
+    border-left:1px solid #aaa;
 }
 .file-list li{
     position: relative;

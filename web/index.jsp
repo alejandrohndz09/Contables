@@ -28,7 +28,7 @@
         <%@include file="navbar.jsp" %>
         <div id="layoutSidenav">
             <%@include file="slide.jsp" %>
-            <div id="layoutSidenav_content">
+            <div id="layoutSidenav_content" class="d-flex align-items-center justify-content-center">
                 <main>   
                     <div class="container">
                         <div class="row">
@@ -40,32 +40,23 @@
                             <div class="col-md-6">
                                 <div class="row">
                                     <div class="col-md-6 py-3">
-                                        <div class="bg-info text-white font-weight-bold text-center">
-                                            <div class="card">
-                                                <div class="card-title text-info">
-                                                    Catalogo de Cuentas
-                                                </div>
-                                                <div class="card-body text-info">
-                                                    <span class="font-weight-bold"><i class="fa fa-folder-open" style="font-size: 55px"></i></span>
-                                                </div>
-                                                <div class="card-footer bg-info">
-                                                    <a href="catalogocuentas.jsp" class="text-white" style="text-decoration: none"><span class="fa fa-eye"></span> Ir</a>
-                                                </div>
+                                        <div class="d-flex justify-content-center position-relative shadow p-3 mb-5 bg-body rounded" style="min-height: 150px;" >
+                                            <div class="d-flex align-items-center"><span class="font-weight-bold">
+                                                    <i class="fa fa-credit-card" style="color: #f5a623; font-size: 55px"></i></span></div>
+                                            <div class="mx-2 d-flex align-items-center justify-content-center">
+                                                <h5 >Cátalogo de Cuentas</h5>
+
+                                                <a href="catalogocuentas.jsp" class="stretched-link"></a>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-md-6 py-3">
-                                        <div class="bg-primary text-white font-weight-bold text-center">
-                                            <div class="card">
-                                                <div class="card-title text-primary">
-                                                    Iniciar Periodo
-                                                </div>
-                                                <div class="card-body text-primary">
-                                                    <span class="font-weight-bold"><i class="fa fa-cogs" style="font-size: 55px"></i></span>
-                                                </div>
-                                                <div class="card-footer bg-primary">
-                                                    <a href="inicioperiodo.jsp" class="text-white" style="text-decoration: none"><span class="fa fa-eye"></span> Ir</a>
-                                                </div>
+                                        <div class="d-flex justify-content-center position-relative shadow p-3 mb-5 bg-body rounded" style="min-height: 150px;" >
+                                            <div class="d-flex align-items-center"><span class="font-weight-bold"><i class="fa fa-square-plus" style="color: #f5a623; font-size: 55px"></i></span></div>
+                                            <div class="mx-2 d-flex align-items-center justify-content-center">
+                                                <h5 >Iniciar Periodo</h5>
+
+                                                <a href="inicioperiodo.jsp" class="stretched-link"></a>
                                             </div>
                                         </div>
                                     </div>
@@ -75,163 +66,130 @@
                             <div class="col-md-6">
                                 <div class="row">
                                     <div class="col-md-6 py-3">
-                                        <div class="bg-info text-white font-weight-bold text-center">
-                                            <div class="card">
-                                                <div class="card-title text-info">
-                                                    Catalogo de Cuentas
-                                                </div>
-                                                <div class="card-body text-info">
-                                                    <span class="font-weight-bold"><i class="fa fa-folder-open" style="font-size: 55px"></i></span>
-                                                </div>
-                                                <div class="card-footer bg-info">
-                                                    <a href="catalogocuentas.jsp" class="text-white" style="text-decoration: none"><span class="fa fa-eye"></span> Ir</a>
-                                                </div>
+
+                                        <div class="d-flex justify-content-center position-relative shadow p-3 mb-5 bg-body rounded" style="min-height: 150px;" >
+                                            <div class="d-flex align-items-center"><span class="font-weight-bold">
+                                                    <i class="fa fa-credit-card" style="color: #f5a623; font-size: 55px"></i></span></div>
+                                            <div class="mx-2 d-flex align-items-center justify-content-center">
+                                                <h5 >Cátalogo de Cuentas</h5>
+
+                                                <a href="catalogocuentas.jsp" class="stretched-link"></a>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-md-6 py-3">
-                                        <div class="bg-primary text-white font-weight-bold text-center">
-                                            <div class="card">
-                                                <div class="card-title text-primary">
-                                                    Iniciar Periodo
-                                                </div>
-                                                <div class="card-body text-primary">
-                                                    <span class="font-weight-bold"><i class="fa fa-cogs" style="font-size: 55px"></i></span>
-                                                </div>
-                                                <div class="card-footer bg-primary">
-                                                    <a href="inicioperiodo.jsp" class="text-white" style="text-decoration: none"><span class="fa fa-eye"></span> Ir</a>
-                                                </div>
+                                        <div class="d-flex justify-content-center position-relative shadow p-3 mb-5 bg-body rounded" style="min-height: 150px;" >
+                                            <div class="d-flex align-items-center"><span class="font-weight-bold">
+                                                    <i class="fa fa-money-bill-transfer" style="color: #f5a623; font-size: 55px"></i></span></div>
+                                            <div class="mx-2 d-flex align-items-center justify-content-center">
+                                                <h5>Ingreso de partidas</h5>
+
+                                                <a href="registrarpartidas.jsp" class="stretched-link"></a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-6 py-3">
+
+                                        <div class="d-flex justify-content-center position-relative shadow p-3 mb-5 bg-body rounded" style="min-height: 150px;" >
+                                            <div class="d-flex align-items-center"><span class="font-weight-bold">
+                                                    <i class="fa fa-coins" style="color: #f5a623; font-size: 55px"></i></span></div>
+                                            <div class="mx-2 d-flex align-items-center justify-content-center">
+                                                <h5 >Balanza de Comprobación</h5>
+
+                                                <a href="balanzacomprobacion.jsp" class="stretched-link"></a>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-md-6 py-3">
-                                        <div class="alert-info font-weight-bold text-center">
-                                            <div class="card">
-                                                <div class="card-title">
-                                                    Libro Mayor
-                                                </div>
-                                                <div class="card-body">
-                                                    <span class="font-weight-bold"><i class="fa fa-list" style="font-size: 55px"></i></span>
-                                                </div>
-                                                <div class="card-footer alert-info">
-                                                    <a href="libromayor.jsp" class="alert-info" style="text-decoration: none"><span class="fa fa-eye"></span> Ir</a>
-                                                </div>
+                                        <div class="d-flex justify-content-center position-relative shadow p-3 mb-5 bg-body rounded" style="min-height: 150px;" >
+                                            <div class="d-flex align-items-center"><span class="font-weight-bold"><i class="fa fa-square-plus" style="color: #f5a623; font-size: 55px"></i></span></div>
+                                            <div class="mx-2 d-flex align-items-center justify-content-center">
+                                                <h5 >Iniciar Periodo</h5>
+
+                                                <a href="inicioperiodo.jsp" class="stretched-link"></a>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-6 py-3">
-                                        <div class="alert-primary font-weight-bold text-center" style="border-radius: 5px !important">
-                                            <div class="card">
-                                                <div class="card-title">
-                                                    Balanza de Comprobación
-                                                </div>
-                                                <div class="card-body">
-                                                    <span class="font-weight-bold"><i class="fa fa-money" style="font-size: 55px"></i></span>
-                                                </div>
-                                                <div class="card-footer alert-primary">
-                                                    <a href="balanzacomprobacion.jsp" class="alert-primary" style="text-decoration: none"><span class="fa fa-eye"></span> Ir</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    
+                                    
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="row">
+                                    
                                     <div class="col-md-6 py-3">
-                                        <div class="bg-success text-white font-weight-bold text-center">
-                                            <div class="card">
-                                                <div class="card-title text-success">
-                                                    Registrar Partidas
-                                                </div>
-                                                <div class="card-body text-success">
-                                                    <span class="font-weight-bold"><i class="fa fa-edit" style="font-size: 55px"></i></span>
-                                                </div>
-                                                <div class="card-footer bg-success">
-                                                    <a href="registrarpartidas.jsp" class="text-white" style="text-decoration: none"><span class="fa fa-eye"></span> Ir</a>
-                                                </div>
+                                        <div class="d-flex justify-content-center position-relative shadow p-3 mb-5 bg-body rounded" style="min-height: 150px;" >
+                                            <div class="d-flex align-items-center"><span class="font-weight-bold">
+                                                    <i class="fa fa-book" style="color: #f5a623; font-size: 55px"></i></span></div>
+                                            <div class="mx-2 d-flex align-items-center justify-content-center">
+                                                <h5>Libro Diario</h5>
+
+                                                <a href="librodiario.jsp" class="stretched-link"></a>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-md-6 py-3">
-                                        <div class="bg-warning text-white font-weight-bold text-center">
-                                            <div class="card">
-                                                <div class="card-title text-warning">
-                                                    Libro Diario
-                                                </div>
-                                                <div class="card-body text-warning">
-                                                    <span class="font-weight-bold"><i class="fa fa-book" style="font-size: 55px"></i></span>
-                                                </div>
-                                                <div class="card-footer bg-warning">
-                                                    <a href="librodiario.jsp" class="text-white" style="text-decoration: none"><span class="fa fa-eye"></span> Ir</a>
-                                                </div>
+                                        <div class="d-flex justify-content-center position-relative shadow p-3 mb-5 bg-body rounded" style="min-height: 150px;" >
+                                            <div class="d-flex align-items-center"><span class="font-weight-bold">
+                                                    <i class="fa fa-list" style="color: #f5a623; font-size: 55px"></i></span></div>
+                                            <div class="mx-2 d-flex align-items-center justify-content-center">
+                                                <h5 >Libro Mayor</h5>
+
+                                                <a href="libromayor.jsp" class="stretched-link"></a>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-md-6 py-3">
-                                        <div class="alert-success font-weight-bold text-center" style="border-radius: 5px !important">
-                                            <div class="card">
-                                                <div class="card-title">
-                                                    Estado de Resultados
-                                                </div>
-                                                <div class="card-body">
-                                                    <span class="font-weight-bold"><i class="fa fa-refresh" style="font-size: 55px"></i></span>
-                                                </div>
-                                                <div class="card-footer alert-success">
-                                                    <a href="estadoresultado.jsp" class="alert-success" style="text-decoration: none"><span class="fa fa-eye"></span> Ir</a>
-                                                </div>
+                                        <div class="d-flex justify-content-center position-relative shadow p-3 mb-5 bg-body rounded" style="min-height: 150px;" >
+                                            <div class="d-flex align-items-center"><span class="font-weight-bold">
+                                                    <i class="fa fa-chart-column" style="color: #f5a623; font-size: 55px"></i></span></div>
+                                            <div class="mx-2 d-flex align-items-center justify-content-center">
+                                                <h5>Estado de Resultados</h5>
+
+                                                <a href="estadoresultado.jsp" class="stretched-link"></a>
                                             </div>
                                         </div>
+
                                     </div>
                                     <div class="col-md-6 py-3">
-                                        <div class="alert-warning font-weight-bold text-center" style="border-radius: 5px !important">
-                                            <div class="card">
-                                                <div class="card-title">
-                                                    Balance General
-                                                </div>
-                                                <div class="card-body">
-                                                    <span class="font-weight-bold"><i class="fa fa-balance-scale" style="font-size: 55px"></i></span>
-                                                </div>
-                                                <div class="card-footer alert-warning">
-                                                    <a href="balancegeneral.jsp" class="alert-warning" style="text-decoration: none"><span class="fa fa-eye"></span> Ir</a>
-                                                </div>
+                                        <div class="d-flex justify-content-center position-relative shadow p-3 mb-5 bg-body rounded" style="min-height: 150px;" >
+                                            <div class="d-flex align-items-center"><span class="font-weight-bold">
+                                                    <i class="fa fa-balance-scale" style="color: #f5a623; font-size: 55px"></i></span></div>
+                                            <div class="mx-2 d-flex align-items-center justify-content-center">
+                                                <h5>Balance General</h5>
+
+                                                <a href="balancegeneral.jsp" class="stretched-link"></a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-2"></div>
-                            <div class="col-md-8 py-3">
-                                <div class="alert-dark font-weight-bold text-center" style="border-radius: 5px !important">
-                                    <div class="card">
-                                        <div class="card-title">
-                                            Cierre del Periodo
-                                        </div>
-                                        <div class="card-body">
-                                            <span class="font-weight-bold"><i class="fa fa-remove" style="font-size: 55px"></i></span>
-                                        </div>
-                                        <div class="card-footer alert-dark">
-                                            <a href="#" class="alert-dark" style="text-decoration: none" data-toggle="modal" data-target="#generarcierre"><span class="fa fa-save"></span> Generar Cierre</a>
-                                        </div>
+                            <div class="col-md-4"></div>
+                            <div class="col-md-3 py-3">
+                                <div class="d-flex justify-content-center position-relative shadow p-3 mb-5 bg-body rounded" style="min-height: 150px;" >
+                                    <div class="d-flex align-items-center"><span class="font-weight-bold">
+                                            <i class="fa fa-square-minus" style="color: #f5a623; font-size: 55px"></i></span></div>
+                                    <div class="mx-2 d-flex align-items-center justify-content-center">
+                                        <h5>Cierre de Ejercicio</h5>
+
+                                        <a href="#" class="stretched-link" data-toggle="modal" data-target="#generarcierre"></a>
                                     </div>
                                 </div>
+                                
                             </div>
-                            <div class="col-md-2"></div>
+                            <div class="col-md-4"></div>
                             <%} else if (p.getEnproceso() == true && p.getTerminado() == true) {%>
                             <div class="col-md-6">
                                 <div class="row">
                                     <div class="col-md-6 py-3">
-                                        <div class="bg-info text-white font-weight-bold text-center">
-                                            <div class="card">
-                                                <div class="card-title text-info">
-                                                    Catalogo de Cuentas
-                                                </div>
-                                                <div class="card-body text-info">
-                                                    <span class="font-weight-bold"><i class="fa fa-folder-open" style="font-size: 55px"></i></span>
-                                                </div>
-                                                <div class="card-footer bg-info">
-                                                    <a href="catalogocuentas.jsp" class="text-white" style="text-decoration: none"><span class="fa fa-eye"></span> Ir</a>
-                                                </div>
+                                       <div class="d-flex justify-content-center position-relative shadow p-3 mb-5 bg-body rounded" style="min-height: 150px;" >
+                                            <div class="d-flex align-items-center"><span class="font-weight-bold">
+                                                    <i class="fa fa-credit-card" style="color: #f5a623; font-size: 55px"></i></span></div>
+                                            <div class="mx-2 d-flex align-items-center justify-content-center">
+                                                <h5 >Cátalogo de Cuentas</h5>
+
+                                                <a href="catalogocuentas.jsp" class="stretched-link"></a>
                                             </div>
                                         </div>
                                     </div>
@@ -335,27 +293,6 @@
                         </div>
                     </div>
                 </main>
-            </div>
-        </div>
-        <div class="modal fade" id="generarcierre" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle"><strong>Realizar Cierre</strong></h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body text-justify">
-                        <span class="fa fa-check-square"></span> Asegurese de haber ingresado el inventario final de mercadería.<br><br>
-                        <span class="fa fa-check-square"></span> Asegurese de haber creado la carpeta <strong>Respaldo Contabilidad</strong> en el disco local <strong>C</strong>.<br><br>
-                        <span class="fa fa-check-square"></span> Al realizar el cierre ya no se podran revertir los cambios, por lo cual se recomienda hacer un back up de la información actual que se almacenara en la carpeta <strong>Respaldo Contabilidad</strong> en el disco local <strong>C</strong>.
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Cancelar</button>
-                        <a type="button" href="cierre.jsp" class="btn btn-info">Finalizar Periodo</a>
-                    </div>
-                </div>
             </div>
         </div>
 

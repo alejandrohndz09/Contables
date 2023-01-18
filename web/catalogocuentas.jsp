@@ -31,86 +31,100 @@
 
 
     </head>
-    <body class="sb-nav-fixed">
+    <body class="">
         <%@include file="navbar.jsp" %>
         <div id="layoutSidenav">
             <%@include file="slide.jsp" %>
             <div id="layoutSidenav_content">
                 <main>
-                    <br><br><br>
+
                     <div class="container">
-                        <h1 class="mt-4">Cátalogo de Cuentas</h1>
-                        <ol class="breadcrumb mb-4">
-                            <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-                            <li class="breadcrumb-item active">Cátalogo</li>
-                        </ol>
-                    </div>
+                        <div class="rounded shadow-lg align-self-center my-3 p-1">
+                            <div class="my-3 mx-2 fs-1 fw-semibold">
+                                <i class="fas fa-credit-card" style="color: #f5a623; "></i>&nbsp;Cátalogo de cuentas
+                            </div>
+                        </div>
+                    </div>  
                     <br>
-                    <div class="container">
+                    <div class="container"> 
                         <div class="row">
-                            <div class="col-md-5">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <!--<div class="alert alert-info">El código debera ingresarse de la forma: #, ##, ####, ######, dependera del nivel al que la cuenta pertenece.</div> -->            
-                                        <div class="sticky-scroll-box bg-white  pt-2 pb-2 px-2">
-                                            <!--formulario de registro de los datos de la cuenta -->
-                                            <form action="CtrCuenta" name="form-cuenta" method="post" id="form-cuenta">
-                                                <div>
-                                                    <h3 class="h3 text-center text-white bg-info py-2 font-weight-bold titulo-registro">Cuenta</h3>
-                                                    <div class="form-group px-5">
-                                                        <div class="input-group mb-3"> 
-                                                            <div class="input-group-prepend">
-                                                                <span class="input-group-text" id="basic-addo1"><i class="fa fa-folder-o"></i></span>
-                                                            </div>
-                                                            <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Nombre de la cuenta">
-                                                            <input type="text" id="idcuenta" name="idcuenta" class="form-control" placeholder="Id de la cuenta" style="display: none">
-                                                        </div>
-                                                    </div>
+<div class="modal fade" id="modalCuenta" tabindex="-1" aria-labelledby="createModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <div class="d-flex align-self-center fs-5 fw-semibold">
+                                                <i class="fas fa-tachometer-alt" style="color: #3196cf"></i>&nbsp;<h1 class="fs-5"
+                                                                                                                      id="editModalLabel">Crear Registro</h1>
+                                            </div>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>    
 
-                                                    <div class="form-group px-5">
-                                                        <div class="input-group mb-3"> 
-                                                            <div class="input-group-prepend">
-                                                                <span class="input-group-text" id="basic-addo2"><i class="fa fa-folder"></i></span>
-                                                            </div>
-                                                            <input type="text" id="codigo" name="codigo" class="form-control" placeholder="Codigo de cuenta">
-                                                        </div>
-                                                    </div>
+                                       
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <!--<div class="alert alert-info">El código debera ingresarse de la forma: #, ##, ####, ######, dependera del nivel al que la cuenta pertenece.</div> -->            
+                                                    <div class="sticky-scroll-box bg-white  pt-2 pb-2 px-2">
+                                                        <!--formulario de registro de los datos de la cuenta -->
+                                                        <form action="CtrCuenta" name="form-cuenta" method="post" id="form-cuenta">
+                                                            <div>
+                                                                <h3 class="h3 text-center text-white bg-info py-2 font-weight-bold titulo-registro">Cuenta</h3>
+                                                                <div class="form-group px-5">
+                                                                    <div class="input-group mb-3"> 
+                                                                        <div class="input-group-prepend">
+                                                                            <span class="input-group-text" id="basic-addo1"><i class="fa fa-folder-o"></i></span>
+                                                                        </div>
+                                                                        <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Nombre de la cuenta">
+                                                                        <input type="text" id="idcuenta" name="idcuenta" class="form-control" placeholder="Id de la cuenta" style="display: none">
+                                                                    </div>
+                                                                </div>
 
-                                                    <div class="form-group px-5">
-                                                        <div class="input-group mb-3"> 
-                                                            <div class="input-group-prepend">
-                                                                <span class="input-group-text" id="basic-addo3"><i class="fa fa-comment"></i></span>
-                                                            </div>
-                                                            <textarea id="descripcion" name="descripcion" class="form-control" placeholder="Descripcion de la cuenta"></textarea>
-                                                        </div>
+                                                                <div class="form-group px-5">
+                                                                    <div class="input-group mb-3"> 
+                                                                        <div class="input-group-prepend">
+                                                                            <span class="input-group-text" id="basic-addo2"><i class="fa fa-folder"></i></span>
+                                                                        </div>
+                                                                        <input type="text" id="codigo" name="codigo" class="form-control" placeholder="Codigo de cuenta">
+                                                                    </div>
+                                                                </div>
 
-                                                    </div>
+                                                                <div class="form-group px-5">
+                                                                    <div class="input-group mb-3"> 
+                                                                        <div class="input-group-prepend">
+                                                                            <span class="input-group-text" id="basic-addo3"><i class="fa fa-comment"></i></span>
+                                                                        </div>
+                                                                        <textarea id="descripcion" name="descripcion" class="form-control" placeholder="Descripcion de la cuenta"></textarea>
+                                                                    </div>
 
-                                                    <div class="form-group px-5">
-                                                        <div class="input-group mb-3"> 
-                                                            <div class="input-group-prepend">
-                                                                <span class="input-group-text" id="basic-addo4"><i class="fa fa-balance-scale"></i></span>
+                                                                </div>
+
+                                                                <div class="form-group px-5">
+                                                                    <div class="input-group mb-3"> 
+                                                                        <div class="input-group-prepend">
+                                                                            <span class="input-group-text" id="basic-addo4"><i class="fa fa-balance-scale"></i></span>
+                                                                        </div>
+                                                                        <select class="form-control" name="tipocuenta" id="tiposaldo">
+                                                                            <option selected="selected" value="">Saldo de la Cuenta</option>
+                                                                            <option value="Deudor">Deudor</option>
+                                                                            <option value="Acreedor">Acreedor</option>
+                                                                            <option value="De Cierre">De Cierre</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
                                                             </div>
-                                                            <select class="form-control" name="tipocuenta" id="tiposaldo">
-                                                                <option selected="selected" value="">Saldo de la Cuenta</option>
-                                                                <option value="Deudor">Deudor</option>
-                                                                <option value="Acreedor">Acreedor</option>
-                                                                <option value="De Cierre">De Cierre</option>
-                                                            </select>
-                                                        </div>
+
+                                                            <hr>
+                                                            <div class="text-center">
+                                                                <div class="btn-group my-3">
+                                                                    <button type="submit" class="btn btn-success" name="guardar"><span class="fa fa-save"></span> Guardar</button>
+                                                                    <button type="reset" class="btn btn-warning pull-left"><span class="fa fa-dedent"></span> Limpiar</button>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+
                                                     </div>
                                                 </div>
-
-                                                <hr>
-                                                <div class="text-center">
-                                                    <div class="btn-group my-3">
-                                                        <button type="submit" class="btn btn-success" name="guardar"><span class="fa fa-save"></span> Guardar</button>
-                                                        <button type="reset" class="btn btn-warning pull-left"><span class="fa fa-dedent"></span> Limpiar</button>
-                                                    </div>
-                                                </div>
-                                            </form>
-
-                                        </div>
+                                            </div>
+                                      
                                     </div>
                                 </div>
                             </div>
@@ -119,7 +133,22 @@
                                 <!--<div class="alert alert-info">Las cuentas seran mostradas de manera jerarquizada, de manera que cada cuenta padre contendra sus cuentas hijas, de igual manera las cuentas hijas padres, si las posee.</div>-->
 
                                 <div class="bg-white  pt-2 pb-2 px-2">
-                                    <h3 class="h3 text-center text-white bg-dark     py-2 font-weight-bold">Catalogo de Cuentas</h3>
+                                    <div class="col-12 d-flex justify-content-between card-header ">
+                                        <div class="fs-5 text-center align-self-center">
+                                            <i class="fas fa-table me-1"></i>
+                                            Cuentas
+                                        </div>
+                                         <a href="" class="btn btn-primary"  data-bs-toggle="modal" data-bs-target="#modalCuenta"
+                                           data-bs-whatever="@mdo">
+                                            <i class="fas fa-add"></i>Editar
+                                        </a>
+                                        <a href="" class="btn btn-primary" onclick="deseleccionarCuenta()" data-bs-toggle="modal" data-bs-target="#modalCuenta"
+                                           data-bs-whatever="@mdo">
+                                            <i class="fas fa-add"></i>Agregar
+                                        </a>
+
+                                    </div>
+
                                     <div  id="arbol-cuentas">
                                         <!--incluiremos el catalogo de cuentas via ajax, por lo cual aqui no sera visible nada-->
                                         <ul class="file-tree" id="cc">

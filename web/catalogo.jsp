@@ -1,8 +1,3 @@
-<%-- 
-    Document   : catalogo
-    Created on : 3/09/2019, 06:08:25 AM
-    Author     : Xom
---%>
 
 <%@page import="java.util.ArrayList"%>
 <%@page import="logica.logicaContables"%>
@@ -23,17 +18,18 @@
         try {           
             if (c != null) {
                 out.print("<li>"
-                        + "<a data-type=\"cuenta\" class='noselect'"
+                        + "<a  data-type=\"cuenta\" class='noselect'"
                         + "data-idcuenta=\"" + c.getIdcuenta() + "\""
                             + " data-codigocuenta=\"" + c.getCodigocuenta() + "\""
                             + " data-nombrecuenta=\"" + c.getNombrecuenta() + "\""
                             + " data-descripcioncuenta=\"" + c.getDescripcioncuenta() + "\""
                             + " data-tipocuenta=\"" + c.getTipocuenta() + "\">");
                     if (lc.buscarcodigo("", c.getCodigocuenta() + "R", 0) != null) {
-                        out.print(c.getCodigocuenta() + "R" + " <i class=\"fa fa-folder\" style=\"color:#23c1da !important\"></i> " + c.getNombrecuenta() + "</a>");
+                        out.print( "<i class=\"fa fa-folder\" style=\"color:#061b22 !important\"></i> "+
+                                   c.getCodigocuenta() + " - " + "R" + c.getNombrecuenta() +"</a>");
 
                     } else {
-                        out.print(c.getCodigocuenta() + " <i class=\"fa fa-folder\" style=\"color:#23c1da !important\"></i> " + c.getNombrecuenta() + "</a>");
+                        out.print("<i class=\"fa fa-folder\" style=\"color:#061b22 !important\"></i> " +c.getCodigocuenta() + " - " +  c.getNombrecuenta()+ "</a>");
                     }
                     if (c.getCuentinternas().size() > 0) {
                         out.print("<ul>");
